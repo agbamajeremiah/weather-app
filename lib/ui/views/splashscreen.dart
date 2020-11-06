@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
     SharedPreferences pref = await SharedPreferences.getInstance();
     final opened = pref.getBool('appOpened');
     if (opened == true) {
-      Navigator.push(context,
+      Navigator.pushReplacement(context,
           MaterialPageRoute(builder: (BuildContext context) {
         return MyHomePage();
       }));
